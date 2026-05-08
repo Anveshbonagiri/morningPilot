@@ -210,9 +210,45 @@ body {
 .toolbar { display:flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
 button {
   background: #ffd76b; color: #0b1020; border: none; padding: 8px 14px;
-  border-radius: 8px; font-weight: 600; cursor: pointer;
+  border-radius: 8px; font-weight: 600; cursor: pointer; font-family: inherit;
 }
 button:hover { background: #ffe28a; }
+.btn-primary {
+  background: linear-gradient(90deg, #6bb7ff, #a855f7);
+  color: white;
+}
+.btn-primary:hover { filter: brightness(1.1); background: linear-gradient(90deg, #6bb7ff, #a855f7); }
+.btn-secondary {
+  background: rgba(255,255,255,0.08); color: #e6e9f2;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+.btn-secondary:hover { background: rgba(255,255,255,0.14); }
+
+.device-modal {
+  position: fixed; inset: 0; background: rgba(11,16,32,0.85); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: center; z-index: 100;
+}
+.device-modal-inner {
+  background: #131a35; border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 16px; padding: 32px; max-width: 480px; width: 90%;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+.device-modal h3 { margin: 0 0 16px; font-size: 22px; }
+.device-modal p { color: #c4c9dd; margin: 12px 0 6px; }
+.device-link {
+  display: inline-block; color: #ffd76b; font-weight: 600;
+  padding: 8px 12px; background: rgba(255,215,107,0.1);
+  border-radius: 8px; margin: 4px 0 12px; text-decoration: none;
+}
+.device-code {
+  font-family: 'Consolas', monospace; font-size: 32px; font-weight: 700;
+  letter-spacing: 6px; text-align: center;
+  background: linear-gradient(90deg, #ffd76b, #ff9a6b);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  padding: 16px; margin: 8px 0 16px;
+  border: 2px dashed rgba(255,215,107,0.4); border-radius: 12px;
+}
+.device-hint { font-size: 13px; color: #9aa3bf; font-style: italic; margin-bottom: 16px; }
 .engine-tag { font-size: 11px; color: #6f779a;}
 .loading { padding: 60px; text-align: center; color: #9aa3bf;}
 .error { background: #ff4d6d22; border: 1px solid #ff4d6d44; padding: 14px; border-radius: 10px; }

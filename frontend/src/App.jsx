@@ -17,11 +17,14 @@ export default function App() {
   const [data, setData] = useState(null)
   const [error, setError] = useState(null)
   const [loading, setLoading] = useState(true)
+  const [authStatus, setAuthStatus] = useState({ authenticated: false })
+  const [deviceFlow, setDeviceFlow] = useState(null)
+  const [useReal, setUseReal] = useState(false)
 
-  const load = async () => {
+  const load = async (real = useReal) => {
     setLoading(true); setError(null)
     try {
-      const r = await fetch('/api/briefing')
+      const r = await fetch(`/api/briefing?real=${real}`)
       if (!r.ok) throw new Error(`HTTP ${r.status}`)
       setData(await r.json())
     } catch (e) {
@@ -29,7 +32,41 @@ export default function App() {
     } finally { setLoading(false) }
   }
 
-  useEffect(() => { load() }, [])
+  const checkAuth = async () => {
+    try {
+      const r = await fetch('/api/auth/status')
+      const j = await r.json()
+      setAuthStatus(j)
+      return j.authenticated
+    } catch { return false }
+  }
+
+  const startConnect = async () => {
+    const r = await fetch('/api/auth/start', { method: 'POST' })
+    const flow = await r.json()
+    setDeviceFlow(flow)
+    // poll auth status every 3s
+    const poll = setInterval(async () => {
+      const ok = await checkAuth()
+      if (ok) {
+        clearInterval(poll)
+        setDeviceFlow(null)
+        setUseReal(true)
+        load(true)
+      }
+    }, 3000)
+  }
+
+  const disconnect = async () => {
+    await fetch('/api/auth/logout', { method: 'POST' })
+    setAuthStatus({ authenticated: false })
+    setUseReal(false)
+    load(false)
+  }
+
+  useEffect(() => {
+    checkAuth().then(ok => { if (ok) setUseReal(true); load(ok) })
+  }, [])
 
   if (loading) return <div className="app"><div className="loading">Synthesizing your morning briefing…</div></div>
   if (error) return <div className="app"><div className="error">Failed to load briefing: {error}</div></div>
@@ -45,10 +82,40 @@ export default function App() {
           <p>{todayStr()} · MorningPilot briefing</p>
         </div>
         <div style={{ textAlign: 'right' }}>
-          <button onClick={load}>↻ Refresh</button>
-          <div className="engine-tag" style={{ marginTop: 6 }}>engine: {data._engine}</div>
+          {authStatus.authenticated ? (
+            <>
+              <button onClick={() => load(true)}>↻ Refresh</button>
+              <button onClick={disconnect} className="btn-secondary" style={{ marginLeft: 8 }}>Disconnect</button>
+              <div className="engine-tag" style={{ marginTop: 6 }}>
+                engine: {data._engine} · data: <strong>{data._data_source}</strong>
+                {authStatus.user?.username && <> · {authStatus.user.username}</>}
+              </div>
+            </>
+          ) : (
+            <>
+              <button onClick={startConnect} className="btn-primary">🔐 Connect Microsoft 365</button>
+              <button onClick={() => load(false)} className="btn-secondary" style={{ marginLeft: 8 }}>↻ Refresh</button>
+              <div className="engine-tag" style={{ marginTop: 6 }}>engine: {data._engine} · data: <strong>mock</strong></div>
+            </>
+          )}
         </div>
       </div>
+
+      {deviceFlow && (
+        <div className="device-modal">
+          <div className="device-modal-inner">
+            <h3>Connect to Microsoft 365</h3>
+            <p>1. Open this URL:</p>
+            <a href={deviceFlow.verification_uri} target="_blank" rel="noopener noreferrer" className="device-link">
+              {deviceFlow.verification_uri} ↗
+            </a>
+            <p>2. Enter this code:</p>
+            <div className="device-code">{deviceFlow.user_code}</div>
+            <p className="device-hint">Sign in with anbonagi@microsoft.com. This window will close automatically when you're connected.</p>
+            <button onClick={() => setDeviceFlow(null)} className="btn-secondary">Cancel</button>
+          </div>
+        </div>
+      )}
 
       <div className="headline">
         <span className="label">✨ AI briefing · Today's headline</span>
