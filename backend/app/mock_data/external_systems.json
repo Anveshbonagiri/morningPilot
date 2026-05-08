@@ -1,0 +1,136 @@
+{
+  "tickets": [
+    {
+      "id": "j1",
+      "key": "PAY-1247",
+      "summary": "P0: Payment gateway timeout spiking — production",
+      "status": "In Review",
+      "priority": "Highest",
+      "assignee": "alex.morgan@contoso.com",
+      "reporter": "raj.patel@contoso.com",
+      "updated": "2026-05-08T07:05:00+05:30",
+      "url": "https://contoso.atlassian.net/browse/PAY-1247",
+      "comment_preview": "Raj: Need your sign-off on the rollback plan before 9am."
+    },
+    {
+      "id": "j2",
+      "key": "ROAD-89",
+      "summary": "Q3 Roadmap epic: confirm scope cuts",
+      "status": "Blocked",
+      "priority": "High",
+      "assignee": "alex.morgan@contoso.com",
+      "reporter": "sarah.chen@contoso.com",
+      "updated": "2026-05-08T06:50:00+05:30",
+      "url": "https://contoso.atlassian.net/browse/ROAD-89",
+      "comment_preview": "Sarah: Blocked on your decision re: feature flag rollout."
+    },
+    {
+      "id": "j3",
+      "key": "DESIGN-44",
+      "summary": "Onboarding mockups v3 — review requested",
+      "status": "Ready for Review",
+      "priority": "Medium",
+      "assignee": "alex.morgan@contoso.com",
+      "reporter": "jamie.lee@contoso.com",
+      "updated": "2026-05-07T22:35:00+05:30",
+      "url": "https://contoso.atlassian.net/browse/DESIGN-44",
+      "comment_preview": "Jamie: No rush — would love thoughts by EOW."
+    },
+    {
+      "id": "j4",
+      "key": "OPS-211",
+      "summary": "Quarterly access review — approve team list",
+      "status": "Open",
+      "priority": "Low",
+      "assignee": "alex.morgan@contoso.com",
+      "reporter": "security-bot",
+      "updated": "2026-05-08T02:00:00+05:30",
+      "url": "https://contoso.atlassian.net/browse/OPS-211",
+      "comment_preview": "Automated: please confirm direct reports' access by May 20."
+    }
+  ],
+  "messages": [
+    {
+      "id": "s1",
+      "from": "ceo@contoso.com",
+      "from_name": "Priya Iyer (CEO)",
+      "channel": "DM",
+      "timestamp": "2026-05-08T08:05:00+05:30",
+      "preview": "Quick — when you land, ping me re: the Globex situation. 5 min.",
+      "mentions_user": true
+    },
+    {
+      "id": "s2",
+      "from": "morgan.kim@contoso.com",
+      "from_name": "Morgan Kim",
+      "channel": "#pricing",
+      "timestamp": "2026-05-08T07:40:00+05:30",
+      "preview": "@alex any thoughts on the v2 pricing tiers doc? Want to ship today.",
+      "mentions_user": true
+    },
+    {
+      "id": "s3",
+      "from": "ops-bot",
+      "from_name": "OpsBot",
+      "channel": "#incidents",
+      "timestamp": "2026-05-08T03:22:00+05:30",
+      "preview": "INCIDENT-882 resolved automatically. No action required.",
+      "mentions_user": false
+    },
+    {
+      "id": "s4",
+      "from": "casey.brooks@contoso.com",
+      "from_name": "Casey Brooks",
+      "channel": "#product-team",
+      "timestamp": "2026-05-08T08:20:00+05:30",
+      "preview": "FYI — sharing customer feedback summary in the doc, comments welcome anytime.",
+      "mentions_user": false
+    }
+  ],
+  "approvals": [
+    {
+      "id": "sap1",
+      "type": "Purchase Order",
+      "doc_id": "PO-2026-04471",
+      "submitter": "raj.patel@contoso.com",
+      "amount": "$48,200 USD",
+      "description": "AWS reserved capacity expansion — Q3",
+      "submitted": "2026-05-07T18:45:00+05:30",
+      "due_by": "2026-05-08T17:00:00+05:30",
+      "status": "Awaiting your approval"
+    },
+    {
+      "id": "sap2",
+      "type": "Expense Report",
+      "doc_id": "EXP-99231",
+      "submitter": "jamie.lee@contoso.com",
+      "amount": "$1,245 USD",
+      "description": "Customer offsite travel — Globex meeting",
+      "submitted": "2026-05-07T21:10:00+05:30",
+      "due_by": "2026-05-12T17:00:00+05:30",
+      "status": "Awaiting your approval"
+    },
+    {
+      "id": "sap3",
+      "type": "Time-off Request",
+      "doc_id": "PTO-58812",
+      "submitter": "morgan.kim@contoso.com",
+      "amount": "3 days",
+      "description": "PTO May 19–21",
+      "submitted": "2026-05-08T05:55:00+05:30",
+      "due_by": "2026-05-15T17:00:00+05:30",
+      "status": "Awaiting your approval"
+    },
+    {
+      "id": "sap4",
+      "type": "Vendor Invoice",
+      "doc_id": "INV-77104",
+      "submitter": "ap-system@contoso.com",
+      "amount": "$320 USD",
+      "description": "Monthly SaaS subscription — auto-renewed",
+      "submitted": "2026-05-08T01:30:00+05:30",
+      "due_by": "2026-05-30T17:00:00+05:30",
+      "status": "Informational"
+    }
+  ]
+}

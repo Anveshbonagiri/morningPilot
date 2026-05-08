@@ -1,0 +1,193 @@
+{
+  "user": {
+    "name": "Alex Morgan",
+    "role": "Senior Product Manager",
+    "vip_contacts": ["sarah.chen@contoso.com", "ceo@contoso.com", "raj.patel@contoso.com"]
+  },
+  "emails": [
+    {
+      "id": "e1",
+      "from": "sarah.chen@contoso.com",
+      "from_name": "Sarah Chen (VP Product)",
+      "subject": "URGENT: Q3 roadmap review needs your sign-off before 10am",
+      "received": "2026-05-08T06:42:00+05:30",
+      "preview": "Alex — board meeting moved up. I need your final sign-off on the Q3 roadmap deck before our 10am sync. Two slides flagged in comments. Can you confirm by 9:30?",
+      "is_unread": true,
+      "has_attachments": true
+    },
+    {
+      "id": "e2",
+      "from": "raj.patel@contoso.com",
+      "from_name": "Raj Patel (Engineering Lead)",
+      "subject": "Re: API breaking change in payments service",
+      "received": "2026-05-08T07:15:00+05:30",
+      "preview": "Heads up — the payments team is shipping a breaking change Friday. We need a decision on whether to delay or adapt. Need your call today.",
+      "is_unread": true,
+      "has_attachments": false
+    },
+    {
+      "id": "e3",
+      "from": "newsletter@producthunt.com",
+      "from_name": "Product Hunt Daily",
+      "subject": "Top 10 launches today",
+      "received": "2026-05-08T05:00:00+05:30",
+      "preview": "Today's hottest products in AI productivity...",
+      "is_unread": true,
+      "has_attachments": false
+    },
+    {
+      "id": "e4",
+      "from": "jamie.lee@contoso.com",
+      "from_name": "Jamie Lee (Designer)",
+      "subject": "Mockups ready for onboarding flow review",
+      "received": "2026-05-07T22:30:00+05:30",
+      "preview": "Posted v3 mockups in Figma. No rush — would love your thoughts by EOW.",
+      "is_unread": true,
+      "has_attachments": false
+    },
+    {
+      "id": "e5",
+      "from": "hr-noreply@contoso.com",
+      "from_name": "HR System",
+      "subject": "Reminder: Complete annual compliance training",
+      "received": "2026-05-08T03:00:00+05:30",
+      "preview": "Your annual compliance training is due May 31. Estimated 30 minutes.",
+      "is_unread": true,
+      "has_attachments": false
+    },
+    {
+      "id": "e6",
+      "from": "ceo@contoso.com",
+      "from_name": "Priya Iyer (CEO)",
+      "subject": "Quick thought on positioning",
+      "received": "2026-05-08T07:50:00+05:30",
+      "preview": "Saw the competitor launch. Want your 2-paragraph take on how we differentiate. No rush, this week is fine.",
+      "is_unread": true,
+      "has_attachments": false
+    },
+    {
+      "id": "e7",
+      "from": "calendar-noreply@zoom.us",
+      "from_name": "Zoom",
+      "subject": "Your meeting recording is ready",
+      "received": "2026-05-08T01:20:00+05:30",
+      "preview": "Recording for 'Customer Discovery Call' is now available.",
+      "is_unread": true,
+      "has_attachments": false
+    },
+    {
+      "id": "e8",
+      "from": "vendor-sales@acmetools.com",
+      "from_name": "Acme Tools Sales",
+      "subject": "Following up on our proposal",
+      "received": "2026-05-07T20:00:00+05:30",
+      "preview": "Just checking in on the proposal we sent last week. Happy to schedule a call.",
+      "is_unread": true,
+      "has_attachments": false
+    }
+  ],
+  "meetings": [
+    {
+      "id": "m1",
+      "subject": "Q3 Roadmap Sign-off with Sarah",
+      "start": "2026-05-08T10:00:00+05:30",
+      "end": "2026-05-08T10:30:00+05:30",
+      "organizer": "sarah.chen@contoso.com",
+      "attendees": 3,
+      "location": "Teams",
+      "has_agenda": true,
+      "notes": "Decision required. Two open items in deck."
+    },
+    {
+      "id": "m2",
+      "subject": "Engineering Sync — Payments breaking change",
+      "start": "2026-05-08T11:30:00+05:30",
+      "end": "2026-05-08T12:00:00+05:30",
+      "organizer": "raj.patel@contoso.com",
+      "attendees": 5,
+      "location": "Teams",
+      "has_agenda": true,
+      "notes": "Need go/no-go decision."
+    },
+    {
+      "id": "m3",
+      "subject": "Optional: Company All-Hands recap",
+      "start": "2026-05-08T13:00:00+05:30",
+      "end": "2026-05-08T14:00:00+05:30",
+      "organizer": "comms@contoso.com",
+      "attendees": 200,
+      "location": "Teams",
+      "has_agenda": false,
+      "notes": "Recording will be available."
+    },
+    {
+      "id": "m4",
+      "subject": "1:1 with Jamie (Design)",
+      "start": "2026-05-08T15:00:00+05:30",
+      "end": "2026-05-08T15:30:00+05:30",
+      "organizer": "jamie.lee@contoso.com",
+      "attendees": 2,
+      "location": "Teams",
+      "has_agenda": false,
+      "notes": "Recurring weekly."
+    },
+    {
+      "id": "m5",
+      "subject": "Customer call — Globex renewal",
+      "start": "2026-05-08T16:30:00+05:30",
+      "end": "2026-05-08T17:00:00+05:30",
+      "organizer": "csm@contoso.com",
+      "attendees": 4,
+      "location": "Teams",
+      "has_agenda": true,
+      "notes": "Renewal at risk. Prep talking points."
+    }
+  ],
+  "teams_messages": [
+    {
+      "id": "t1",
+      "from": "raj.patel@contoso.com",
+      "from_name": "Raj Patel",
+      "channel": "Direct Message",
+      "timestamp": "2026-05-08T07:20:00+05:30",
+      "preview": "@Alex — can you reply to my email when you get in? Need your call before standup.",
+      "mentions_user": true
+    },
+    {
+      "id": "t2",
+      "from": "sarah.chen@contoso.com",
+      "from_name": "Sarah Chen",
+      "channel": "Direct Message",
+      "timestamp": "2026-05-08T06:45:00+05:30",
+      "preview": "Following up on email — board moved up to 11. Sign-off needed by 9:30.",
+      "mentions_user": true
+    },
+    {
+      "id": "t3",
+      "from": "team-product",
+      "from_name": "#product-team",
+      "channel": "Channel",
+      "timestamp": "2026-05-08T08:10:00+05:30",
+      "preview": "FYI everyone — sprint demo moved to Thursday.",
+      "mentions_user": false
+    },
+    {
+      "id": "t4",
+      "from": "morgan.kim@contoso.com",
+      "from_name": "Morgan Kim",
+      "channel": "Direct Message",
+      "timestamp": "2026-05-07T23:45:00+05:30",
+      "preview": "Hey when you get a sec, thoughts on the pricing page copy?",
+      "mentions_user": false
+    },
+    {
+      "id": "t5",
+      "from": "bot-deploy",
+      "from_name": "DeployBot",
+      "channel": "#eng-alerts",
+      "timestamp": "2026-05-08T04:12:00+05:30",
+      "preview": "Production deploy succeeded — v2.34.1",
+      "mentions_user": false
+    }
+  ]
+}
