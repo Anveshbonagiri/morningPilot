@@ -8,3 +8,6 @@ frontend/dist/
 
 Recording*.mp4
 *.mp4
+
+backend/.token_cache.bin
+
